@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubernetesCluster.Client", "KubernetesCluster.Client\KubernetesCluster.Client.csproj", "{A80EBC80-B932-4AB0-8641-9E8125DD663E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A80EBC80-B932-4AB0-8641-9E8125DD663E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A80EBC80-B932-4AB0-8641-9E8125DD663E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A80EBC80-B932-4AB0-8641-9E8125DD663E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A80EBC80-B932-4AB0-8641-9E8125DD663E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACBDF7BD-FF2C-4FE2-8D79-0A8D72AC3336}
+	EndGlobalSection
+EndGlobal
