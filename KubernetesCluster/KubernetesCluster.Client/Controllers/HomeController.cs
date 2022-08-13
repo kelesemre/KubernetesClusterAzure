@@ -27,8 +27,9 @@ namespace KubernetesCluster.Client.Controllers
             var response = await _httpClient.GetAsync("/product");
             var content = await response.Content.ReadAsStringAsync();
             var productList = JsonConvert.DeserializeObject<IEnumerable<Product>>(content);
-
+            
             return View(productList);
+            //return View(new List<Product> { new Product { Name = "P!" }, new Product { Name = "P#" } });
         }
 
         public IActionResult Privacy()
