@@ -24,7 +24,8 @@ namespace KubernetesCluster.Client.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var response = await _httpClient.GetAsync("/product");
+            var response = await _httpClient.GetAsync("api/product");
+            _logger.LogInformation("api called --> kubernetesclusterapi");
             var content = await response.Content.ReadAsStringAsync();
             var productList = JsonConvert.DeserializeObject<IEnumerable<Product>>(content);
             
