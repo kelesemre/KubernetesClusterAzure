@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  kubernetescluster.api:
+    image: ${DOCKER_REGISTRY-}kubernetesclusterapi
+    build:
+      context: .
+      dockerfile: KubernetesCluster.API/Dockerfile
+
+  kubernetescluster.client:
+    image: ${DOCKER_REGISTRY-}kubernetesclusterclient
+    build:
+      context: .
+      dockerfile: KubernetesCluster.Client/Dockerfile
+
+  kubernetescluster.db:
+    image: mongo

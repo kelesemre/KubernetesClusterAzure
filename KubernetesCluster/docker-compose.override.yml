@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+  kubernetescluster.api:
+    container_name: kubernetesclusterapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseSettings:ConnectionString=mongodb://kubernetesclusterdb:27017"
+      - "DatabaseSettings:DatabaseName=ProductDb"
+      - "DatabaseSettings:CollectionName=Products"
+    depends_on:
+      - kubernetescluster.db
+    ports:
+      - "7000:80"
+
+  kubernetescluster.client:
+    container_name: kubernetesclusterclient
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development 
+      - "ShoppingAPIUrl=http://kubernetesclusterapi"
+    depends_on:
+      - kubernetescluster.db
+      - kubernetescluster.api
+    ports:
+      - "7001:80"
+
+  kubernetescluster.db:
+    container_name: kubernetesclusterdb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ${WEBAPP_STORAGE_HOME}/site:/data/db
