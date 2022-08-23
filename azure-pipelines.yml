@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '9ac34655-fcb6-4ecd-b458-b65aa6ea70ae'
-  imageRepository: 'kelesemrekubernetesclusterazure'
+  imageRepository: 'kubernetesclusterapi' # edited 
   containerRegistry: 'shoppingxgacr.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/KubernetesCluster/KubernetesCluster.API/Dockerfile'
   tag: '$(Build.BuildId)'
