@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kubernetesclusterapi 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubernetesclusterapi
+  template:
+    metadata:
+      labels:
+        app: kubernetesclusterapi 
+    spec:
+      containers:
+        - name: kubernetesclusterapi 
+          image: shoppingxgacr.azurecr.io/kubernetesclusterapi
+          ports:
+          - containerPort: 80
