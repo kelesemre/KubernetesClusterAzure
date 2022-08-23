@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: shoppingclient
-          image: shoppingxgacr.azurecr.io/kubernetesclusterclient:v1
+          image: shoppingxgacr.azurecr.io/kubernetesclusterclient:v2
           imagePullPolicy: IfNotPresent          
           ports:
             - containerPort: 80
