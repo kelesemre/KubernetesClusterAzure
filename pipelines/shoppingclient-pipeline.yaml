@@ -20,7 +20,7 @@ variables:
   dockerRegistryServiceConnection: '815381c7-a223-407f-8726-5414055ce453'
   imageRepository: 'kubernetesclusterclient'
   containerRegistry: 'shoppingxgacr.azurecr.io'
-  dockerfilePath: '**/Dockerfile'
+  dockerfilePath: 'KubernetesCluster/KubernetesCluster.Client/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'shoppingxgacr38886a4b-auth'
 
