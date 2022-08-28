@@ -1,7 +1,7 @@
 # Docker
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
-
+# CI part
 trigger:
 - master
 
@@ -10,7 +10,7 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '9ac34655-fcb6-4ecd-b458-b65aa6ea70ae'
+  dockerRegistryServiceConnection: '9ac34655-fcb6-4ecd-b458-b65aa6ea70ae' #azure>>project Settings>> pipeline section
   imageRepository: 'kubernetesclusterapi' # edited 
   containerRegistry: 'shoppingxgacr.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/KubernetesCluster/KubernetesCluster.API/Dockerfile'
